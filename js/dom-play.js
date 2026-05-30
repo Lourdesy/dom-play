@@ -18,8 +18,25 @@ const spans = document.querySelectorAll("#play span");
 console.log(spans);
 
 for (const mySpan of spans){
-    mySpan.style.backgroundColor = "yellow";
+    //mySpan.style.backgroundColor = "yellow";
     let actor = mySpan.dataset.actor;
-    alert(actor);
+    mySpan.addEventListener("click",function(ev){
+        //alert("I'm " + actor);
+        highlight(mySpan);
+
+
+    });
 
 }
+function highlight(el) {
+   let currentBg = el.style.backgroundColor;
+  
+   // Catch the empty string state on the first click
+   if (currentBg === "" || currentBg === "white") {
+       el.style.backgroundColor = "yellow";
+   } else {
+       el.style.backgroundColor = "white";
+   }
+}
+
+
