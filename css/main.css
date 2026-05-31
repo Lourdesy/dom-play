@@ -14,12 +14,32 @@ html {
     background: #ff0;
 }
 
+#play span {
+   /* explicitly declare background color */
+   background-color: white;
+   padding: 2px 4px;
+   border-radius: 4px;
+  
+   /*
+       Tells the browser to animate changes over 0.3 seconds with a smooth 'ease'
+   */
+   transition: background-color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-text {
+    text-align: center;
+    margin: 1.5em auto; /* Centers the paragraph spacing block itself */
+    max-width: 90%;     /* Keeps line lengths comfortable to read on tablet/desktop */
+}
+
 h1 {
-    font-weight: normal;
+    font-family: 'Quicksand', sans-serif;;
     margin: auto;
     background: #fff;
     line-height: 2.5em;
+    text-align: center;
 }
+
 
 main.wrapper {
     background-color: white;
@@ -34,6 +54,21 @@ h2,h3 {
     font-weight: normal;
     margin-left: 1em;
     line-height: 1em;
+}
+
+
+/* Paste the new rules right under it */
+#play h2 {
+    text-align: center;       
+    color: darkcyan;          
+    font-size: 2em;           
+    margin-bottom: 5px;       
+}
+
+.scene-header {
+    text-align: center;       /* Centers the scene text */
+    color: #666666;           /* Gives it a soft, professional dark grey color */
+    font-size: 1.1em;
 }
 
 a {
@@ -52,6 +87,14 @@ footer {
     text-align: center;
     padding: 1em;
 }
+
+
+.page-number {
+    text-align: center;         /* Centers the text perfectly on the screen */
+    color: darkcyan;            /* Changes the font color to match your accent color */
+    font-weight: bold;          /* Makes the text pop slightly */
+}
+
 
 /* Responsive rules */
 

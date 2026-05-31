@@ -21,13 +21,42 @@ for (const mySpan of spans){
     //mySpan.style.backgroundColor = "yellow";
     let actor = mySpan.dataset.actor;
     mySpan.addEventListener("click",function(ev){
-        //alert("I'm " + actor);
-        highlight(mySpan);
-
-
-    });
+       
+        //load function with current actor
+        highlightActor(actor);
+        });
 
 }
+
+function highlightActor(actor) {
+        //loop all spans 
+           for (const mySpan of spans){
+             // Highlight current actor
+   if (actor == mySpan.dataset.actor) {
+       mySpan.style.backgroundColor = "yellow";
+       mySpan.style.fontWeight = "bold";
+
+       // Subtle neon glow using text-shadow
+       mySpan.style.textShadow = '0 0 4px rgba(255, 215, 0, 0.6)';
+  
+   // Lift the text off the page slightly
+       mySpan.style.boxShadow = '0 2px 5px rgba(0,0,0,0.15)';
+       //mySpan.style.display = "inline-block";
+
+   } else {
+       mySpan.style.backgroundColor = "white";
+       mySpan.style.fontWeight = "normal";
+
+          mySpan.style.textShadow = 'none';
+   mySpan.style.boxShadow = 'none';
+   mySpan.style.display = "inline";
+}
+
+   }
+       }
+    
+  
+
 function highlight(el) {
    let currentBg = el.style.backgroundColor;
   
